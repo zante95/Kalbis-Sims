@@ -84,12 +84,25 @@ function status(){
 	tStatus = setTimeout(function(){status();},1000);
 }
 
+function normalMode(){
+	var htmlSisip1='<img src="image/nekoboy.png"/>';
+	document.getElementById("character").innerHTML= htmlSisip1;
+	var htmlSisip2='<img src="image/nekogirl.png"/>';
+	document.getElementById("character").innerHTML= htmlSisip2;
+}
+
 /*function chat(){
 
 }
 
 function eatMale(){
-
+	stamina_male += 3;
+	hunger_male -= 1;
+	fun_male -= 1;
+	social_male -= 1;
+	var htmlSisip1='<img src="image/burger.gif"/>';
+	document.getElementById("character").innerHTML=htmlSisip1;
+	male=setTimeout(function(){normalMode()},5000);
 }
 function sleepMale(){
 

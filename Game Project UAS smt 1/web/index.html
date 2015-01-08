@@ -15,7 +15,12 @@
 		<div id="jam">
 		</div>
 	<input type="button" id="button_start" value="Start"/>
+	
 	<div id="male">
+	<div id="arena">
+			<div id="jam"></div>
+			<div id="character"></div>
+		</div>
 	<h2 id="heading_name_male_player">
 	Player 1
 	</h2>
@@ -24,12 +29,21 @@
 		<input type="text" id="fun_male" value="Fun Level"/>
 		<input type="text" id="social_male" value="Social Level"/>
 		<input type="text" id="mood_male" value="Mood Level"/>
-		<input type="button" id="eat_male" value="Eat"/>
-		<input type="button" id="sleep_male" value="Sleep"/>
-		<input type="button" id="play_male" value="Play"/>
-		<img id="male_pict" src="image/nekoboy.png"/>
+		<div id="action1">
+			<form name="aksi1" action="" method="POST">
+				<input type="button" id="eat_male" value="Eat"/>
+				<input type="button" id="sleep_male" value="Sleep"/>
+				<input type="button" id="play_male" value="Play"/>
+				<img id="male_pict" src="image/nekoboy.png"/>
+			</form>
+		</div>
 	</div>
+	
 	<div id="female">
+	<div id="arena">
+			<div id="jam"></div>
+			<div id="character"></div>
+		</div>
 	<h2 id="heading_name_female_player">
 	Player 2
 	</h2>	
@@ -38,10 +52,14 @@
 		<input type="text" id="fun_female" value="Fun Level"/>
 		<input type="text" id="social_female" value="Social Level"/>
 		<input type="text" id="mood_female" value="Mood Level"/>
-		<input type="button" id="eat_female" value="Eat"/>
-		<input type="button" id="sleep_female" value="Sleep"/>
-		<input type="button" id="play_female" value="Play"/>
-		<img id="female_pict" src="image/nekogirl.png"/>
+		<div id="action2">
+			<form name="aksi2" action="" method="POST">
+				<input type="button" id="eat_female" value="Eat"/>
+				<input type="button" id="sleep_female" value="Sleep"/>
+				<input type="button" id="play_female" value="Play"/>
+				<img id="female_pict" src="image/nekogirl.png"/>
+			</form>
+		</div>
 	</div>
 </div>	
 </body>
