@@ -1,4 +1,28 @@
 /*style.css*/
+.black{
+	color:black;
+}
+
+.red{
+	color:red;
+}
+
+.green{
+	color:green;
+}
+
+.orange{
+	color:orange;
+}
+
+.terlihat{
+	visibility:visible;
+}
+
+.ngumpet{
+	visibility:hidden;
+}
+
 #background{
 position:absolute;
 }

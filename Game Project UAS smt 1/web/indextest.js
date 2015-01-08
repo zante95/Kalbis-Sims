@@ -1,4 +1,5 @@
 /*indextest.js*/
+var levelRelation = 1;
 
 var hunger_male = Math.floor((Math.random()*80)+20);
 var stamina_male = Math.floor((Math.random()*80)+20);
@@ -37,22 +38,123 @@ function statusCheck(){
 	if(mood_female >= 100) mood_female = 100;
 	if(progress >= 100) progress = 100;
 	
-	document.getElementById("hunger_male").value = hunger_male;
-	document.getElementById("stamina_male").value = stamina_male;
-	document.getElementById("fun_male").value = fun_male;
-	document.getElementById("social_male").value = social_male;
-	document.getElementById("mood_male").value = mood_male;
+	document.getElementById("hunger_male").firstChild.nodeValue = hunger_male;
+	document.getElementById("stamina_male").firstChild.nodeValue = stamina_male;
+	document.getElementById("fun_male").firstChild.nodeValue = fun_male;
+	document.getElementById("social_male").firstChild.nodeValue = social_male;
+	document.getElementById("mood_male").firstChild.nodeValue = mood_male;
 
-	document.getElementById("hunger_female").value = hunger_female;
-	document.getElementById("stamina_female").value = stamina_female;
-	document.getElementById("fun_female").value = fun_female;
-	document.getElementById("social_female").value = social_female;
-	document.getElementById("mood_female").value = mood_female;
+	document.getElementById("hunger_female").firstChild.nodeValue = hunger_female;
+	document.getElementById("stamina_female").firstChild.nodeValue = stamina_female;
+	document.getElementById("fun_female").firstChild.nodeValue = fun_female;
+	document.getElementById("social_female").firstChild.nodeValue = social_female;
+	document.getElementById("mood_female").firstChild.nodeValue = mood_female;
 	document.getElementById("progress").value = progress;
+	
+	if(hunger_male <= 100 && hunger_male > 65){
+		document.getElementById("hunger_male").setAttribute("class","green");
+	}
+	if(hunger_male <= 65 && hunger_male > 20){
+		document.getElementById("hunger_male").setAttribute("class","orange");
+	}
+	if(hunger_male <= 20){
+		document.getElementById("hunger_male").setAttribute("class","red");
+	}
+	
+	if(hunger_female <= 100 && hunger_female > 65){
+		document.getElementById("hunger_female").setAttribute("class","green");
+	}
+	if(hunger_female <= 65 && hunger_female > 20){
+		document.getElementById("hunger_female").setAttribute("class","orange");
+	}
+	if(hunger_female <= 20){
+		document.getElementById("hunger_female").setAttribute("class","red");
+	}
+	
+	if(stamina_male <= 100 && stamina_male > 65){
+		document.getElementById("stamina_male").setAttribute("class","green");
+	}
+	if(stamina_male <= 65 && stamina_male > 20){
+		document.getElementById("stamina_male").setAttribute("class","orange");
+	}
+	if(stamina_male <= 20){
+		document.getElementById("stamina_male").setAttribute("class","red");
+	}
+	
+	if(stamina_female <= 100 && stamina_female > 65){
+		document.getElementById("stamina_female").setAttribute("class","green");
+	}
+	if(stamina_female <= 65 && stamina_female > 20){
+		document.getElementById("stamina_female").setAttribute("class","orange");
+	}
+	if(stamina_female <= 20){
+		document.getElementById("stamina_female").setAttribute("class","red");
+	}
+	
+	if(fun_male <= 100 && fun_male > 65){
+		document.getElementById("fun_male").setAttribute("class","green");
+	}
+	if(fun_male <= 65 && fun_male > 20){
+		document.getElementById("fun_male").setAttribute("class","orange");
+	}
+	if(fun_male <= 20){
+		document.getElementById("fun_male").setAttribute("class","red");
+	}
+	
+	if(fun_female <= 100 && fun_female > 65){
+		document.getElementById("fun_female").setAttribute("class","green");
+	}
+	if(fun_female <= 65 && fun_female > 20){
+		document.getElementById("fun_female").setAttribute("class","orange");
+	}
+	if(fun_female <= 20){
+		document.getElementById("fun_female").setAttribute("class","red");
+	}
+	
+	if(social_male <= 100 && social_male > 65){
+		document.getElementById("social_male").setAttribute("class","green");
+	}
+	if(social_male <= 65 && social_male > 20){
+		document.getElementById("social_male").setAttribute("class","orange");
+	}
+	if(social_male <= 20){
+		document.getElementById("social_male").setAttribute("class","red");
+	}
+	
+	if(social_female <= 100 && social_female > 65){
+		document.getElementById("social_female").setAttribute("class","green");
+	}
+	if(social_female <= 65 && social_female > 20){
+		document.getElementById("social_female").setAttribute("class","orange");
+	}
+	if(social_female <= 20){
+		document.getElementById("social_female").setAttribute("class","red");
+	}
+	
+	if(mood_male <= 100 && mood_male > 65){
+		document.getElementById("mood_male").setAttribute("class","green");
+	}
+	if(mood_male <= 65 && mood_male > 20){
+		document.getElementById("mood_male").setAttribute("class","orange");
+	}
+	if(mood_male <= 20){
+		document.getElementById("mood_male").setAttribute("class","red");
+	}
+	
+	if(mood_female <= 100 && mood_female > 65){
+		document.getElementById("mood_female").setAttribute("class","green");
+	}
+	if(mood_female <= 65 && mood_female > 20){
+		document.getElementById("mood_female").setAttribute("class","orange");
+	}
+	if(mood_female <= 20){
+		document.getElementById("mood_female").setAttribute("class","red");
+	}
 	var timeChecker1 = setTimeout(function(){statusCheck();},1000);
 }
 
 function statusDecreaser(){
+	if(levelRelation == 1){
 	hunger_male -= 1;
 	hunger_female -= 1;
 	stamina_male -= 1;
@@ -61,6 +163,57 @@ function statusDecreaser(){
 	fun_female -= 1;
 	social_male -= 1;
 	social_female -= 1;
+	}
+	if(levelRelation == 2){
+	hunger_male -= 2;
+	hunger_female -= 2;
+	stamina_male -= 2;
+	stamina_female -= 2;
+	fun_male -= 2;
+	fun_female -= 2;
+	social_male -= 2;
+	social_female -= 2;
+	}
+	if(levelRelation == 3){
+	hunger_male -= 3;
+	hunger_female -= 3;
+	stamina_male -= 3;
+	stamina_female -= 3;
+	fun_male -= 3;
+	fun_female -= 3;
+	social_male -= 3;
+	social_female -= 3;
+	}
+	if(levelRelation == 4){
+	hunger_male -= 4;
+	hunger_female -= 4;
+	stamina_male -= 4;
+	stamina_female -= 4;
+	fun_male -= 4;
+	fun_female -= 4;
+	social_male -= 4;
+	social_female -= 4;
+	}
+	if(levelRelation == 5){
+	hunger_male -= 5;
+	hunger_female -= 5;
+	stamina_male -= 5;
+	stamina_female -= 5;
+	fun_male -= 5;
+	fun_female -= 5;
+	social_male -= 5;
+	social_female -= 5;
+	}
+	if(levelRelation == 6){
+	hunger_male -= 6;
+	hunger_female -= 6;
+	stamina_male -= 6;
+	stamina_female -= 6;
+	fun_male -= 6;
+	fun_female -= 6;
+	social_male -= 6;
+	social_female -= 6;
+	}
 	mood_male = 0.25*hunger_male + 0.25*stamina_male + 0.25*fun_male + 0.25*social_male;
 	mood_female = 0.25*hunger_female + 0.25*stamina_female + 0.25*fun_female + 0.25*social_female;
 	var timeChecker2 = setTimeout(function(){statusDecreaser();},3000);
@@ -95,32 +248,42 @@ function gameOverChecker(){
 }
 
 function promotionChecker(){
-	if(progress == 100){
-	clearTimeout(timeChecker1);
-	clearTimeout(timeChecker2);
-	clearTimeout(timeChecker3);
-	clearTimeout(timeChecker4);
-	penanya = window.prompt("Masukkan penanya (laki/perempuan):");
-		if(penanya == "laki"){
-			pertanyaan = window.prompt("laki-laki bertanya. Masukkan pertanyaan untuk perempuan :");
-			jawaban = window.prompt ("Pertanyaan laki-laki adalah : "+ pertanyaan + ". Silahkan perempuan menjawab pertanyaan tersebut.");
-			cek = window.prompt ("Apakah jawaban tersebut benar? (Laki-laki memasukkan benar/salah.)");
+	
+		if(levelRelation == 1 && progress == 100){
+		jawaban = window.prompt("Soal 1: Apa istilah untuk kegiatan yang dilakukan sesorang dalam mencari tahu sesuatu tapi berlebihan?");
+		kunci = "kepo";
+
+			if(jawaban == kunci){
+			window.alert("Selamat anda naik level.");
+			progress = 0;
+			levelRelation += 1;
+			document.getElementById("status2").innerHTML = "ACQUINTANCE";
+			/*relationship status naik*/
+			}
+			if(jawaban != kunci){
+			window.alert("jawaban salah, anda tidak naik level. Silahkan coba lagi pada kesempatan berikutnya.");
+			progress = Math.floor((Math.random()*50)+20);
+			/*relationship status tetap*/		
+			}
 		}
-		if(penanya == "perempuan"){
-			pertanyaan = window.prompt("perempuan bertanya. Masukkan pertanyaan untuk laki-laki :");
-			jawaban = window.prompt ("Pertanyaan perempuan adalah : "+ pertanyaan + ". Silahkan laki-laki menjawab pertanyaan tersebut.");
-			cek = window.prompt ("Apakah jawaban tersebut benar? (Perempuan memasukkan benar/salah.)");
-		}
-	if(cek =="benar"){
-		progress = 0;
-		/*relationship status naik*/
-		}
-	if(cek == "salah"){
-		window.alert("jawaban salah, anda tidak naik level. Silahkan coba lagi pada kesempatan berikutnya.");
-		progress = Math.floor((Math.random()*75)+40);
-		/*relationship status tetap*/		
-		}
-	}
+
+		if(levelRelation == 2 && progress == 100){
+		jawaban = window.prompt("Soal 2: Apa nama keyword cheat di game the sims yang digunakan untuk mengatur jumlah uang kita menjadi banyak?");
+		kunci = "motherload";
+
+			if(jawaban == kunci){
+			window.alert("Selamat anda naik level.");
+			progress = 0;
+			levelRelation += 1;
+			document.getElementById("status2").innerHTML = "FRIEND";
+			/*relationship status naik*/
+			}
+			if(jawaban != kunci){
+			window.alert("jawaban salah, anda tidak naik level. Silahkan coba lagi pada kesempatan berikutnya.");
+			progress = Math.floor((Math.random()*50)+20);
+			/*relationship status tetap*/		
+			}
+		}	
 	timeChecker4 = setTimeout(function(){promotionChecker();},1000);
 }
 
@@ -153,19 +316,16 @@ function sleepMale(){
 	stamina_male += 15;
 	fun_male -= 2;
 }
-
 function playMale(){
 	hunger_male -= 2;
 	stamina_male -= 2;
 	fun_male += 15;
 }
-
 function eatFemale(){
 	hunger_female += 15;
 	stamina_female -= 2;
 	fun_female -= 2;
 }
-
 function sleepFemale(){
 	hunger_female -= 2;
 	stamina_female += 15;
