@@ -248,44 +248,42 @@ function gameOverChecker(){
 }
 
 function promotionChecker(){
-	
-		if(levelRelation == 1 && progress == 100){
-		jawaban = window.prompt("Soal 1: Apa istilah untuk kegiatan yang dilakukan sesorang dalam mencari tahu sesuatu tapi berlebihan?");
-		kunci = "kepo";
-
-			if(jawaban == kunci){
-			window.alert("Selamat anda naik level.");
-			progress = 0;
-			levelRelation += 1;
-			document.getElementById("status2").innerHTML = "ACQUINTANCE";
-			/*relationship status naik*/
+	if(progress == 100){
+	clearTimeout(timeChecker1);
+	clearTimeout(timeChecker2);
+	clearTimeout(timeChecker3);
+	clearTimeout(timeChecker4);
+	penanya = window.prompt("Masukkan penanya (laki/perempuan):");
+		if(penanya == "laki"){
+			var kunci = olahraga;
+				document.write();
+			
+			var tebakan = window.prompt("Apa hobby laki-laki?");
+			if(kunci != tebakan){
+				document.write("Jawaban salah! Coba tebak lagi.");
 			}
-			if(jawaban != kunci){
-			window.alert("jawaban salah, anda tidak naik level. Silahkan coba lagi pada kesempatan berikutnya.");
-			progress = Math.floor((Math.random()*50)+20);
-			/*relationship status tetap*/		
+			else{
+				document.write("Jawaban benar! Selamat, kamu dapat lanjut ke relationship status acquintance.");
+			}
+			
+			
+		}
+		if(penanya == "perempuan"){
+			var kunci2 = menyanyi;
+				document.write();
+				
+			var tebakan2 = window.prompt("Apa hobby perempuan?");
+			if(kunci2 != tebakan2){
+				document.write("Jawaban salah! Coba tebak lagi.");
+			}
+			else{
+				document.write("Jawaban benar! Selamat, kamu dapat lanjut ke relationship status acquintance.");
 			}
 		}
-
-		if(levelRelation == 2 && progress == 100){
-		jawaban = window.prompt("Soal 2: Apa nama keyword cheat di game the sims yang digunakan untuk mengatur jumlah uang kita menjadi banyak?");
-		kunci = "motherload";
-
-			if(jawaban == kunci){
-			window.alert("Selamat anda naik level.");
-			progress = 0;
-			levelRelation += 1;
-			document.getElementById("status2").innerHTML = "FRIEND";
-			/*relationship status naik*/
-			}
-			if(jawaban != kunci){
-			window.alert("jawaban salah, anda tidak naik level. Silahkan coba lagi pada kesempatan berikutnya.");
-			progress = Math.floor((Math.random()*50)+20);
-			/*relationship status tetap*/		
-			}
-		}	
+	}
 	timeChecker4 = setTimeout(function(){promotionChecker();},1000);
 }
+
 
 function start(){
 	statusCheck();
