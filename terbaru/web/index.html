@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<script type="text/javascript" src="jquery-1.11.1.min.js">
+</script>
+<title>KalbisSims</title>
+</head>
+<body>
+
+<div id="game_over">
+<img id="game_over_img" src="image/game_over.jpg" height="650"/>
+<h2 id="game_over_text2">ONE OF THE CHARACTER STATUS REACHED 0.</h2>
+<h2 id="game_over_text3">THANKS FOR PLAYING!</h2>
+</div>
+
+<div id="game_finish">
+
+</div>
+
+<div id="main_menu">
+	<img id="background_menu" src="image/main.jpg" height="650"/>
+	<div id="judul">
+		<img id="main_header" src="image/main_header.png"/>
+	</div>
+	<div id="main_start">
+	<span id="main_start_text">START</span>
+	</div>
+	
+	<div id="player_name_input">
+	<span id="text_player1">Player 1</span>
+	<input type="text" id="input_male"/>
+	<span id="text_player2">Player 2</span>
+	<input type="text" id="input_female"/>
+		<div id="start_game">
+		<span id="start_game_text">START GAME</span>
+		</div>
+		<div id="back_game">
+		<span id="back_game_text">BACK</span>
+		</div>
+	</div>
+	
+	<div id="main_instruction">
+	<span id="main_instruction_text">INSTRUCTION</span>
+	</div>
+	
+	<div id="instruction">
+		<p id="instruction_text">
+		Make your way to keep both of the character status balance and win<br/> 
+		the game with the fastest time! Each of the character's status will<br/> 
+		be decreased over time and will be decreased by a greater number<br/>
+		when the level of the game increases. There will be a sudden pop up<br/> 
+		quiz to promote your relationship status to a higher level!<br/> 
+		Happy Gaming!<br/>
+		<br/>
+		Lose condition:<br/>
+		<br/>
+		One of the character's status reach zero.<br/>
+		<br/>
+		Win condition:<br/>
+		<br/>
+		Reach the "MARRIED" relationship status.
+		</p>
+		<div id="back_ins">
+		<span id="back_ins_text">BACK</span>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+	<img id="background" src="image/livingroom.jpg" height="650"/>
+	<div id="tengah">
+	<span id="status1">Relationship Status: <br/><span id="status2">STRANGER</span></span>
+	<input type="text" id="progress" value="Relationship progress"/>
+	<input type="button" id="button_chat" class="terlihat" value="Chat"/>
+	<input type="button" id="button_hobby" class="ngumpet" value="Hobby"/>
+	<input type="button" id="button_humour" class="ngumpet" value="Humour"/>
+	<input type="button" id="button_date" class="ngumpet" value="Date"/>
+	<input type="button" id="button_propose" class="ngumpet" value="Propose a marriage"/>
+		<div id="sisipMenit">
+		menit
+		</div>
+		<div id="titikdua">
+		:
+		</div>
+		<div id="sisipDetik">
+		detik
+		</div>
+	</div>	
+	<input type="button" id="button_start" class="terlihat" value="Start"/>
+		<form action="index.html" method="POST">
+		<input type="submit" id="button_restart" class="terlihat" value="Restart"/>
+		</form>
+	<div id="male">
+	<h2 id="heading_name_male_player">
+	Player 1
+	</h2>
+		<h2 id="hunger_male" class="black">Hunger Level</h2>
+		<h2 id="stamina_male" class="black">Stamina Level</h2>
+		<h2 id="fun_male" class="black">Fun Level</h2>
+		<h2 id="social_male" class="black">Social Level</h2>
+		<h2 id="mood_male" class="black">Mood Level</h2>
+		<input type="button" id="eat_male" value="Eat"/>
+		<input type="button" id="sleep_male" value="Sleep"/>
+		<input type="button" id="play_male" value="Play"/>
+	</div>
+	<img id="male_pict" src="image/nekoboy.png" height="287" width="125"/>
+	<div id="female">
+	<h2 id="heading_name_female_player">
+	Player 2
+	</h2>	
+		<h2 id="hunger_female" class="black">Hunger Level</h2>
+		<h2 id="stamina_female" class="black">Stamina Level</h2>
+		<h2 id="fun_female" class="black">Fun Level</h2>
+		<h2 id="social_female" class="black">Social Level</h2>
+		<h2 id="mood_female" class="black">Mood Level</h2>
+		<input type="button" id="eat_female" value="Eat"/>
+		<input type="button" id="sleep_female" value="Sleep"/>
+		<input type="button" id="play_female" value="Play"/>
+	</div>
+	<img id="female_pict" src="image/nekogirl.png" height="287" width="133"/>
+</div>	
+</body>
+<script type="text/javascript" src="indextest.js">
+</script>
+</html>
