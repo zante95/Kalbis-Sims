@@ -28,6 +28,7 @@ $("#main_menu").hide();
 $("#player_name_input").hide();
 $("#instruction").hide();
 $("#game_over").hide();
+$("#game_finish").hide();
 $("#main_menu").fadeIn(2000);
 
 $("#main_start").click(function(){
@@ -186,22 +187,28 @@ function statusCheck(){
 	
 	if(mood_male <= 100 && mood_male > 65){
 		document.getElementById("mood_male").setAttribute("class","green");
+		document.getElementById("icon_mood_male").setAttribute("src","image/icon and animations/smile.png");
 	}
 	if(mood_male <= 65 && mood_male > 20){
 		document.getElementById("mood_male").setAttribute("class","orange");
+		document.getElementById("icon_mood_male").setAttribute("src","image/icon and animations/datar.png");
 	}
 	if(mood_male <= 20){
 		document.getElementById("mood_male").setAttribute("class","red");
+		document.getElementById("icon_mood_male").setAttribute("src","image/icon and animations/angry.png");
 	}
 	
 	if(mood_female <= 100 && mood_female > 65){
 		document.getElementById("mood_female").setAttribute("class","green");
+		document.getElementById("icon_mood_female").setAttribute("src","image/icon and animations/smile.png");
 	}
 	if(mood_female <= 65 && mood_female > 20){
 		document.getElementById("mood_female").setAttribute("class","orange");
+		document.getElementById("icon_mood_female").setAttribute("src","image/icon and animations/datar.png");
 	}
 	if(mood_female <= 20){
 		document.getElementById("mood_female").setAttribute("class","red");
+		document.getElementById("icon_mood_female").setAttribute("src","image/icon and animations/angry.png");
 	}
 	timeChecker1 = setTimeout(function(){statusCheck();},1000);
 }
@@ -384,7 +391,10 @@ function promotionChecker(){
 			progress = 0;
 			levelRelation += 1;
 			document.getElementById("status2").innerHTML = "MARRIED";
-			window.alert("Selamat, anda telah menyelesaikan game! Silahkan restart game anda.");
+			$("#wrapper").fadeOut(2000);
+			$("#game_finish").fadeIn(2000);
+			document.getElementById("victory_text2").innerHTML += ' '+menit+' menit '+detik+' detik.';
+	gameStop();
 			/*relationship status naik*/
 			}
 			if(jawaban != kunci){

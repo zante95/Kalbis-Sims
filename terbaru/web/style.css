@@ -16,6 +16,20 @@ position:absolute;
 margin-top:-500px;
 margin-left:575px;
 }
+#game_finish{
+position:absolute;
+color:white;
+}
+#victory_text2{
+position:absolute;
+margin-left:20px;
+margin-top:-400px;
+}
+#victory_text3{
+position:absolute;
+margin-top:-150px;
+margin-left:1000px;
+}
 #main_menu{
 position:absolute;
 }
@@ -304,11 +318,21 @@ position:absolute;
 margin-top:100px;
 margin-left:200px;
 }
+#icon_hunger_male{
+position:absolute;
+margin-top:90px;
+margin-left:250px;
+}
 
 #stamina_male{
 position:absolute;
 margin-top:150px;
 margin-left:200px;
+}
+#icon_stamina_male{
+position:absolute;
+margin-top:135px;
+margin-left:250px;
 }
 
 #fun_male{
@@ -316,17 +340,32 @@ position:absolute;
 margin-top:200px;
 margin-left:200px;
 }
+#icon_fun_male{
+position:absolute;
+margin-top:185px;
+margin-left:250px;
+}
 
 #social_male{
 position:absolute;
 margin-top:250px;
 margin-left:200px;
 }
+#icon_social_male{
+position:absolute;
+margin-top:240px;
+margin-left:250px;
+}
 
 #mood_male{
 position:absolute;
 margin-top:50px;
 margin-left:200px;
+}
+#icon_mood_male{
+position:absolute;
+margin-top:40px;
+margin-left:250px;
 }
 
 #eat_male{
@@ -371,11 +410,21 @@ position:absolute;
 margin-top:100px;
 margin-left:200px;
 }
+#icon_hunger_female{
+position:absolute;
+margin-top:90px;
+margin-left:125px;
+}
 
 #stamina_female{
 position:absolute;
 margin-top:150px;
 margin-left:200px;
+}
+#icon_stamina_female{
+position:absolute;
+margin-top:135px;
+margin-left:125px;
 }
 
 #fun_female{
@@ -383,17 +432,32 @@ position:absolute;
 margin-top:200px;
 margin-left:200px;
 }
+#icon_fun_female{
+position:absolute;
+margin-top:185px;
+margin-left:125px;
+}
 
 #social_female{
 position:absolute;
 margin-top:250px;
 margin-left:200px;
 }
+#icon_social_female{
+position:absolute;
+margin-top:240px;
+margin-left:125px;
+}
 
 #mood_female{
 position:absolute;
 margin-top:50px;
 margin-left:200px;
+}
+#icon_mood_female{
+position:absolute;
+margin-top:40px;
+margin-left:125px;
 }
 
 #eat_female{
