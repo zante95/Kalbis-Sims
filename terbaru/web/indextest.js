@@ -280,15 +280,19 @@ function statusDecreaser(){
 }
 
 function normalMale(){
-	document.getElementById("male_pict").setAttribute("src","image/nekoboy.png");
-	document.getElementById("male_pict").setAttribute("width","125");
+	document.getElementById("male_pict").setAttribute("class","terlihat");
+	document.getElementById("male_pict").setAttribute("src","image/smurf/normal_male.png");
+	document.getElementById("male_pict").setAttribute("width","200");
 	document.getElementById("male_pict").setAttribute("height","287");
+	document.getElementById("kegiatan_bareng").setAttribute("class","ngumpet");
 }
 
 function normalFemale(){
-	document.getElementById("female_pict").setAttribute("src","image/nekogirl.png");
-	document.getElementById("female_pict").setAttribute("width","133");
+	document.getElementById("female_pict").setAttribute("class","terlihat");
+	document.getElementById("female_pict").setAttribute("src","image/smurf/normal_female.png");
+	document.getElementById("female_pict").setAttribute("width","200");
 	document.getElementById("female_pict").setAttribute("height","287");
+	document.getElementById("kegiatan_bareng").setAttribute("class","ngumpet");
 }
 
 function gameStop(){
@@ -297,6 +301,7 @@ function gameStop(){
 	clearTimeout(timeChecker2);
 	clearTimeout(timeChecker3);
 	clearTimeout(timeChecker4);
+	/*clearTimeout(timeChecker5);*/
 	normalMale();
 	normalFemale();
 }
@@ -393,8 +398,8 @@ function promotionChecker(){
 			document.getElementById("status2").innerHTML = "MARRIED";
 			$("#wrapper").fadeOut(2000);
 			$("#game_finish").fadeIn(2000);
-			document.getElementById("victory_text2").innerHTML += ' '+menit+' menit '+detik+' detik.';
-	gameStop();
+			document.getElementById("victory_text2").innerHTML += ' '+menit+' minute(s) '+detik+' second(s).';
+			gameStop();
 			/*relationship status naik*/
 			}
 			if(jawaban != kunci){
@@ -416,7 +421,12 @@ function start(){
 	document.getElementById("heading_name_male_player").firstChild.nodeValue = nama_player1;
 	document.getElementById("heading_name_female_player").firstChild.nodeValue = nama_player2;
 }
-
+function kegiatan(){
+	document.getElementById("male_pict").setAttribute("class","ngumpet");
+	document.getElementById("female_pict").setAttribute("class","ngumpet");
+	document.getElementById("kegiatan_bareng").setAttribute("class","terlihat");
+	/*timeChecker5 = setTimeout(function(){kegiatan();},3000);*/
+} 
 function chat(){
 	social_male += 15;
 	social_female += 15;
@@ -427,8 +437,8 @@ function chat(){
 	hunger_female -= 2;
 	stamina_female -= 2;
 	fun_female -= 2;
-	document.getElementById("male_pict").setAttribute("src","");
-	document.getElementById("female_pict").setAttribute("src","");
+	document.getElementById("kegiatan_bareng").setAttribute("src","image/smurf/chat.png");
+	kegiatan();
 	normal1 = setTimeout(function(){normalMale();},3000);
 	normal2 = setTimeout(function(){normalFemale();},3000);
 }
@@ -442,8 +452,8 @@ function hobby(){
 	hunger_female -= 5;
 	stamina_female -= 3;
 	fun_female += 15;
-	document.getElementById("male_pict").setAttribute("src","");
-	document.getElementById("female_pict").setAttribute("src","");
+	document.getElementById("kegiatan_bareng").setAttribute("src","image/smurf/hobby.png");
+	kegiatan();
 	normal1 = setTimeout(function(){normalMale();},3000);
 	normal2 = setTimeout(function(){normalFemale();},3000);
 }
@@ -457,8 +467,8 @@ function humour(){
 	hunger_female -= 2;
 	stamina_female -= 2;
 	fun_female += 2;
-	document.getElementById("male_pict").setAttribute("src","");
-	document.getElementById("female_pict").setAttribute("src","");
+	document.getElementById("kegiatan_bareng").setAttribute("src","image/smurf/humour.png");
+	kegiatan();
 	normal1 = setTimeout(function(){normalMale();},3000);
 	normal2 = setTimeout(function(){normalFemale();},3000);
 }
@@ -472,8 +482,8 @@ function date(){
 	hunger_female -= 2;
 	stamina_female -= 2;
 	fun_female += 2;
-	document.getElementById("male_pict").setAttribute("src","");
-	document.getElementById("female_pict").setAttribute("src","");
+	document.getElementById("kegiatan_bareng").setAttribute("src","image/smurf/date.png");
+	kegiatan();
 	normal1 = setTimeout(function(){normalMale();},3000);
 	normal2 = setTimeout(function(){normalFemale();},3000);
 }
@@ -486,8 +496,8 @@ function propose(){
 	hunger_female -= 2;
 	stamina_female -= 2;
 	fun_female -= 2;
-	document.getElementById("male_pict").setAttribute("src","");
-	document.getElementById("female_pict").setAttribute("src","");
+	document.getElementById("kegiatan_bareng").setAttribute("src","image/smurf/propose.png");
+	kegiatan();
 	normal1 = setTimeout(function(){normalMale();},3000);
 	normal2 = setTimeout(function(){normalFemale();},3000);
 	}
@@ -498,8 +508,8 @@ function propose(){
 	hunger_female -= 2;
 	stamina_female -= 2;
 	fun_female -= 2;
-	document.getElementById("male_pict").setAttribute("src","");
-	document.getElementById("female_pict").setAttribute("src","");
+	document.getElementById("kegiatan_bareng").setAttribute("src","image/smurf/propose_fail.png");
+	kegiatan();
 	normal1 = setTimeout(function(){normalMale();},3000);
 	normal2 = setTimeout(function(){normalFemale();},3000);
 	}
@@ -509,54 +519,42 @@ function eatMale(){
 	hunger_male += 15;
 	stamina_male -= 2;
 	fun_male -= 2;
-	document.getElementById("male_pict").setAttribute("src","image/icon and animations/burger.gif");
-	document.getElementById("male_pict").setAttribute("width","150");
-	document.getElementById("male_pict").setAttribute("height","150");
+	document.getElementById("male_pict").setAttribute("src","image/smurf/eat_male.png");
 	normal1 = setTimeout(function(){normalMale();},3000);
 }
 function sleepMale(){
 	hunger_male -= 2;
 	stamina_male += 15;
 	fun_male -= 2;
-	document.getElementById("male_pict").setAttribute("src","image/icon and animations/cowok tidur.jpg");
-	document.getElementById("male_pict").setAttribute("width","250");
-	document.getElementById("male_pict").setAttribute("height","287");
+	document.getElementById("male_pict").setAttribute("src","image/smurf/sleep_male.png");
 	normal1 = setTimeout(function(){normalMale();},3000);
 }
 function playMale(){
 	hunger_male -= 2;
 	stamina_male -= 2;
 	fun_male += 15;
-	document.getElementById("male_pict").setAttribute("src","image/icon and animations/art.gif");
-	document.getElementById("male_pict").setAttribute("width","150");
-	document.getElementById("male_pict").setAttribute("height","150");
+	document.getElementById("male_pict").setAttribute("src","image/smurf/fun_male.png");
 	normal1 = setTimeout(function(){normalMale();},3000);
 }
 function eatFemale(){
 	hunger_female += 15;
 	stamina_female -= 2;
 	fun_female -= 2;
-	document.getElementById("female_pict").setAttribute("src","image/icon and animations/sandwich.gif");
-	document.getElementById("female_pict").setAttribute("width","150");
-	document.getElementById("female_pict").setAttribute("height","150");
+	document.getElementById("female_pict").setAttribute("src","image/smurf/eat_female.png");
 	normal2 = setTimeout(function(){normalFemale();},3000);
 }
 function sleepFemale(){
 	hunger_female -= 2;
 	stamina_female += 15;
 	fun_female -= 2;
-	document.getElementById("female_pict").setAttribute("src","image/icon and animations/cewek tidur.jpg");
-	document.getElementById("female_pict").setAttribute("width","250");
-	document.getElementById("female_pict").setAttribute("height","287");
+	document.getElementById("female_pict").setAttribute("src","image/smurf/sleep_female.png");
 	normal2 = setTimeout(function(){normalFemale();},3000);
 }
 function playFemale(){
 	hunger_female -= 2;
 	stamina_female -= 2;
 	fun_female += 15;
-	document.getElementById("female_pict").setAttribute("src","image/icon and animations/balon.gif");
-	document.getElementById("female_pict").setAttribute("width","150");
-	document.getElementById("female_pict").setAttribute("height","150");
+	document.getElementById("female_pict").setAttribute("src","image/smurf/fun_female.png");
 	normal2 = setTimeout(function(){normalFemale();},3000);
 }
 
